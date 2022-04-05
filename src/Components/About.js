@@ -1,0 +1,17 @@
+import React,{useContext,useEffect} from 'react'
+import noteContext from '../context/notes/noteContext'
+
+
+const About = () => {
+
+
+
+
+  return (
+    <div>
+      My name is Qurban
+    </div>
+  )
+}
+
+export default About
