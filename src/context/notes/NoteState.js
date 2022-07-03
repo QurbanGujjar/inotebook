@@ -23,16 +23,23 @@ const NoteState = (props) => {
   };
 
   // Add a note
-  const addNote = async (title, description, tag) => {
+  // title, description, tag
+  const addNote = async (fd) => {
     // API call
+    // console.log(title, description, tag,imgData)
     const response = await fetch(`${host}/api/notes/addnote`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        // "Content-Type": "multipart/form-data;boundary=MyBoundary",
+        // "Content-Type": "application/json",
         "auth-token":
-          localStorage.getItem("token"),
+          localStorage.getItem("token")
       },
-      body: JSON.stringify({ title, description, tag }),
+      // body: JSON.stringify(title, description, tag),
+      // body: JSON.stringify(fd),
+      // file:imgData
+      // body:fd
+      // body:fd
     });
 
     const json =await response.json()

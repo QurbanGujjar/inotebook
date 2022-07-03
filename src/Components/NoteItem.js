@@ -17,10 +17,6 @@ const {deleteNote}=context
       {note.description}</p>
   </div>
 </div>
-
-
-
-
     </div>
   )
 }
